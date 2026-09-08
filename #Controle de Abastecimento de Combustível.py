@@ -1,6 +1,6 @@
 #CONTROLE DE ABASTECIMENTO DE COMBUSTÍVEL
 veiculos_mais40litros = 0
-quantidade_veiculos = []
+quantidade_veiculos = 0
 quantidade_litros = 0
 preco_litro = 5
 valor_total = 0
@@ -21,8 +21,7 @@ else:
         quantidade_litros_total = quantidade_litros + abastece
         valor_abastecimento = quantidade_litros_total * preco_litro
         valor_a_pagar = valor_total + valor_abastecimento
-        for i in quantidade_veiculos:
-            media_litros = quantidade_litros_total/quantidade_veiculos[i]
+        media_litros = quantidade_litros_total/quantidade_veiculos
 
         
     print(f"Quantidade de veículos abastecidos: {quantidade_total_veiculos}")
