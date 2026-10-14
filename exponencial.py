@@ -3,12 +3,16 @@ def fatorial(n):
         return 1
     return fatorial(n-1) #A função é executada dentro de si mesma
 
-def exponencial(n, e):
-    if n > 0 and e > 0:
-        mult = n * n
-        e = e - 1
-        return mult
-    return mult*exponencial(e-1)
+
+
+def exponencial(base, expoente):
+    if base == 0:
+        return 0
+    elif expoente == 0:
+        return 1
+    else:
+        return base*exponencial(base, expoente - 1)
+    
 
 num = int(input("Informe o número base: "))
 expo = int(input("Informe o expoente: "))
